@@ -58,7 +58,8 @@
         <!-- RIGHT CARD: Contact Form -->
         <div class="contact-right">
             <h2>Send a Message</h2>
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST"> 
+                 <input type="hidden" name="access_key" value="af3135d7-d56e-4021-8609-8800ea6f6563">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
