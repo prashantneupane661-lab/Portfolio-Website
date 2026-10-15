@@ -7,7 +7,6 @@
   const progress = document.querySelector('.scroll-progress');
   const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
   const sections = [...document.querySelectorAll('main section[id]')];
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function closeMenu() {
     menu.setAttribute('aria-expanded', 'false');
@@ -39,12 +38,12 @@
 
   const typingTitle = document.querySelector('.typing-title');
   const typingCursor = document.querySelector('.typing-cursor');
-  if (!reduceMotion && typingTitle) {
+  if (typingTitle && typingCursor) {
     const titles = ['BCA Student', 'Web Developer', 'Computer Enthusiast', 'Aspiring IT Professional'];
     let titleIndex = 0;
-    let characterIndex = titles[0].length;
+    let characterIndex = 0;
     let deleting = false;
-    const syncCursor = () => { typingCursor.style.left = `${typingTitle.offsetWidth}px`; };
+    const syncCursor = () => { typingCursor.style.left = `${typingTitle.getBoundingClientRect().width}px`; };
     const typeNext = () => {
       const current = titles[titleIndex];
       typingTitle.textContent = current.slice(0, characterIndex);
@@ -62,11 +61,9 @@
       }
       window.setTimeout(typeNext, delay);
     };
+    typingTitle.textContent = '';
     syncCursor();
-    window.setTimeout(() => {
-      deleting = true;
-      typeNext();
-    }, 1450);
+    typeNext();
   }
 
   let scheduled = false;
