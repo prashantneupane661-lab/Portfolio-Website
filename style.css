@@ -156,3 +156,81 @@ body{font-size:17px;line-height:1.72}
   .hero-role-static{display:none!important;}
   .typing-cursor{display:block!important;animation:cursorBlink 1.15s steps(1,end) infinite!important;}
 }
+
+/* Mobile polish for the hero, highlights, experience card, and footer. */
+.highlight-list span{display:flex;align-items:flex-start;min-width:0;gap:9px}
+.highlight-list b{flex:0 0 auto;margin:1px 0 0;font-variant-numeric:tabular-nums}
+.experience-card{grid-template-columns:62px minmax(0,1fr)}
+.experience-main{min-width:0}
+.experience-main .eyebrow{line-height:1.5;overflow-wrap:anywhere}
+.experience-main h3{overflow-wrap:anywhere}
+.experience-current{display:none}
+.site-footer{background:linear-gradient(145deg,#080c17,#0b1421);}
+html[data-theme=light] .site-footer{background:linear-gradient(145deg,#e6ebf3,#dce8e9)}
+.site-footer .footer-brand .brand-name{font-size:18px;font-weight:800;letter-spacing:-.035em}
+.site-footer .footer-brand p{color:var(--muted);font-size:14px;line-height:1.75;margin-top:13px}
+.site-footer .footer-links h2{color:var(--text);font:700 13px Manrope,sans-serif;letter-spacing:.02em;margin:0 0 4px}
+.site-footer .footer-links a,.site-footer .footer-links span{color:var(--muted);font-size:14px;line-height:1.65;transition:color .2s,transform .2s}
+.site-footer .footer-links a:hover{color:var(--accent);transform:translateX(2px)}
+.site-footer .footer-contact-links{align-items:flex-start;justify-self:end;text-align:left;min-width:0}
+.site-footer .footer-contact-link{display:flex;align-items:center;gap:10px;width:min(100%,320px);padding:10px 12px;border:1px solid rgba(131,219,195,.16);border-radius:11px;background:rgba(131,219,195,.045);color:var(--text)!important;overflow-wrap:anywhere}
+.site-footer .footer-contact-link svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;color:var(--accent)}
+.site-footer .footer-contact-link span{min-width:0;color:inherit;font-size:13px;line-height:1.5}
+.site-footer .footer-email{border-color:rgba(131,219,195,.25)}
+.site-footer .footer-email:hover{background:rgba(131,219,195,.1);border-color:rgba(131,219,195,.48);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.site-footer .footer-phone{border-color:rgba(110,196,185,.18)}
+.site-footer .footer-phone svg{color:#82cbbf}
+.site-footer .footer-phone:hover{background:rgba(110,196,185,.09);border-color:rgba(110,196,185,.42);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.site-footer .footer-location{padding:3px 2px 0 28px;color:var(--muted);font-size:13px!important}
+.site-footer .footer-back-top-icon{transition:transform .2s,border-color .2s,background .2s,color .2s}
+.site-footer .footer-back-top-icon:hover{background:rgba(131,219,195,.1);color:var(--accent);transform:translateY(-2px);border-color:var(--accent)}
+@media(max-width:800px){
+  .site-footer .footer-top{gap:28px 24px}
+  .site-footer .footer-bottom{min-height:0;padding-top:18px}
+}
+@media(max-width:520px){
+  .hero-visual{min-height:360px;padding:35px 0 68px;}
+  .image-frame{position:relative;width:210px;height:255px;z-index:1;}
+  .image-caption{left:0;bottom:54px;max-width:100%;padding:9px 11px;gap:9px;}
+  .image-caption strong{font-size:12px}
+  .image-caption small{font-size:10px;white-space:nowrap}
+  .caption-mark{width:32px;height:32px;flex:0 0 32px}
+  .tag-top{top:0;right:0;max-width:calc(50% - 4px);white-space:normal;text-align:center;font-size:10px;padding:7px 9px}
+  .tag-bottom{right:0;bottom:0;max-width:65%;white-space:normal;text-align:center;font-size:10px;padding:7px 9px}
+  .image-halo{width:255px;height:275px}
+  .highlight-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}
+  .highlight-list span{font-size:13px;line-height:1.45}
+  .experience-card{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:20px 16px}
+  .experience-mark{width:42px;height:42px;font-size:10px;border-radius:13px}
+  .experience-main .eyebrow{font-size:10px;letter-spacing:.045em;margin-bottom:8px}
+  .experience-main h3{font-size:18px;line-height:1.35}
+  .experience-org{margin-bottom:14px}
+  .experience-main ul{margin:0;gap:9px}
+  .experience-main li{font-size:13px;line-height:1.55;padding-left:17px}
+  .site-footer{padding:40px 0 24px}
+  .site-footer .footer-top{grid-template-columns:minmax(0,1fr);gap:25px;padding-bottom:28px}
+  .site-footer .footer-brand{grid-column:1/-1}
+  .site-footer .footer-brand .brand-name{font-size:17px}
+  .site-footer .footer-brand p{font-size:14px;max-width:34ch}
+  .site-footer .footer-links{gap:9px}
+  .site-footer .footer-links h2{font-size:13px;margin-bottom:2px}
+  .site-footer .footer-links a,.site-footer .footer-links span{font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+  .site-footer .footer-quick-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;align-items:start}
+  .site-footer .footer-quick-links h2{grid-column:1/-1}
+  .site-footer .footer-contact-links{align-items:flex-start;text-align:left;justify-self:stretch}
+  .site-footer .footer-contact-link{width:100%;padding:9px 10px}
+  .site-footer .footer-contact-link span{font-size:12px}
+  .site-footer .footer-location{padding-left:2px}
+  .site-footer .footer-bottom{gap:12px}
+  .site-footer .footer-legal{font-size:12px;line-height:1.55}
+  .site-footer .footer-back-top-icon{width:38px;height:38px}
+}
+@media(max-width:360px){
+  .highlight-list{grid-template-columns:1fr;gap:10px}
+  .hero-visual{min-height:350px}
+  .image-frame{width:196px;height:240px}
+  .image-caption{max-width:100%;bottom:54px}
+  .image-caption small{font-size:9px}
+  .tag-top,.tag-bottom{font-size:9px;padding:6px 7px}
+  .experience-card{padding-inline:13px;gap:10px}
+}
